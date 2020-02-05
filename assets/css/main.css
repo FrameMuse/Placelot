@@ -313,6 +313,11 @@ main {
     font-weight: 700;
     color: white;
     cursor: pointer;
+    transition: 0.125s linear background-color;
+}
+
+.lead-make-bet__button:hover {
+    background: #48a00a;
 }
 
 .lead-history {}
