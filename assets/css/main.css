@@ -120,11 +120,11 @@ a.ghost {
 .topbar-menu__link {
     margin-left: 0.5em;
     font-weight: 400;
-    transition: 0.125s linear text-shadow;
+    transition: 0.125s linear color;
 }
 
 .topbar-menu__link:hover {
-    text-shadow: 0 0 1px #5c626f;
+    color: #333;
 }
 
 .topbar-menu__link--bordered {
@@ -158,6 +158,11 @@ main {
     margin-bottom: 5em;
     font-size: 0.85em;
     color: #9c9c9c;
+}
+
+.page-part__breadcrumb>a:hover {
+    color: #333;
+    text-decoration: underline;
 }
 
 /* Lead */
@@ -294,6 +299,7 @@ main {
     border-bottom: 0.05em solid;
     font-weight: 600;
     cursor: pointer;
+    transition: .125s linear border-color;
 }
 
 .lead-make-bet__add-sum--button:first-child {
