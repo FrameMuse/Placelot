@@ -188,7 +188,6 @@ main {
 
 .lead-info__image {
     background: whitesmoke;
-    border-top: 0.05em solid #aab2b9;
     width: inherit;
     height: 20em;
     object-fit: contain;
@@ -232,9 +231,12 @@ main {
 }
 
 .lead-ment__title {
-    font-size: 2.15em;
+    font-size: 2em;
     font-weight: 600;
-    padding-bottom: 0.25em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 0.025em solid #aab2b9;
+    text-align: center;
 }
 
 .lead-ment__finaces {
