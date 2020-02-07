@@ -389,3 +389,111 @@ main {
     direction: rtl;
     font-size: 0.75em;
 }
+
+/* Profile */
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    width: 35em;
+}
+
+.profile-info__avatar {
+    padding: 0.25em;
+    width: 10em;
+    height: 10em;
+    border: 0.125em solid #767d8c;
+    border-radius: 100%;
+}
+
+.profile-info__details {
+    margin-left: 2em;
+}
+
+.profile-info__nickname {
+    display: flex;
+    align-items: center;
+}
+
+.profile-info__nickname--nickname {
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+.profile-info__registartion-time {
+    margin-top: 0.5em;
+    font-size: 0.85em;
+}
+
+.profile-info__achievements {
+    display: grid;
+    grid-gap: 0.5em;
+    margin-top: 1.25em;
+}
+
+.profile-info__achievements>span {
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+.profile-level {
+    display: grid;
+}
+
+.profile-level__lvl {
+    margin-bottom: 0.25em;
+    font-weight: 500;
+}
+
+.profile-level-progress-bar {
+    width: 100%;
+    height: 0.25em;
+    background: #d7deec;
+    border-radius: 10em;
+}
+
+.profile-level-progress-bar__filled {
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    background: #47beca;
+    background: #51c36a;
+    background: #767d8c;
+    border-radius: inherit;
+}
+
+.profile-bages {
+    display: flex;
+    margin-top: 1.25em;
+}
+
+.profile-bages__bage {
+    padding: 0.4em 1em;
+    margin-right: 0.75em;
+    border-radius: 10em;
+    font-size: 0.75em;
+    font-weight: 600;
+    color: white;
+}
+
+.profile-bages__bage:last-child {
+    margin: 0;
+}
+
+.profile-bages__bage--blue {
+    background: #43638c;
+}
+
+.profile-bages__bage--green {
+    background: #4dc756;
+}
+
+.profile-bages__bage--pink {
+    background: #d668be;
+}
