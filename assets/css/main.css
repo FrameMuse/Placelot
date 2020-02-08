@@ -497,3 +497,115 @@ main {
 .profile-bages__bage--pink {
     background: #d668be;
 }
+
+.profile-personal-page {
+    display: grid;
+    align-content: flex-start;
+    background: white;
+    border-radius: 0.5em;
+    flex: 1;
+}
+
+.profile-personal-page__header {
+    padding: 1em;
+    border-radius: 0.5em 0.5em 0 0;
+    box-shadow: 0 6px 10px -6px #ccc;
+    background: whitesmoke;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.profile-personal-page__body {
+    height: 250px;
+    background: #ccc;
+    border-radius: 0 0 0.5em 0.5em;
+}
+
+/* Reveal Block  */
+
+.reveal-block {
+    margin-top: 2em;
+}
+
+.reveal-block__summary {
+    display: flex;
+    padding: 0.25em 0;
+    border-bottom: 0.075em solid;
+    font-size: 1.25em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.reveal-block__content {
+    display: none;
+    margin-top: 2.5em;
+}
+
+.reveal-block__summary::after {
+    content: "\002B";
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: right;
+    line-height: 50%;
+    flex: 1;
+}
+
+.reveal-block--revealed .reveal-block__summary::after {
+    content: "\2013";
+}
+
+.reveal-block--revealed {}
+
+.reveal-block--revealed .reveal-block__content {
+    display: block;
+}
+
+/* Place Ground  */
+
+.place-ground {
+    display: grid;
+    grid-gap: 3em;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.place-ground-lead {
+    display: grid;
+    grid-gap: 1em;
+    justify-items: center;
+    padding: 1em;
+    border-radius: 0.25em;
+    box-shadow: 0 0 10px 0px #eaeaea;
+}
+
+.place-ground-lead__add-time {
+    font-size: 0.85em;
+    font-weight: 500;
+    justify-self: flex-start;
+}
+
+.place-ground-lead__image {
+    width: 10em;
+    height: 5em;
+    object-fit: cover;
+}
+
+.place-ground-lead__title {
+    font-size: 1.35em;
+    font-weight: 500;
+}
+
+.place-ground-lead__mark {
+    margin-top: -0.5em;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.place-ground-lead__state {
+    padding: 0.5em 1.25em;
+    background: #67b76c;
+    border-radius: 10em;
+    font-weight: 600;
+    color: white;
+}
