@@ -1,5 +1,5 @@
 // Profile
 
-$(".reveal-block").click(function () {
-    $(this).toggleClass("reveal-block--revealed");
+$(".reveal-block__summary").click(function () {
+    $(this).parent().toggleClass("reveal-block--revealed");
 });
