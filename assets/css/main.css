@@ -231,7 +231,7 @@ a.ghost {
     background: #ccc;
     border-radius: 5em;
     color: white;
-    font-size: 0.85em;
+    font-size: 1em;
     font-weight: 600;
     cursor: pointer;
     transition: .125s linear background-color;
