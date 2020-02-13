@@ -16,7 +16,7 @@ body {
 
 header {
     background: white;
-    border-bottom: 0.075em solid #ccc;
+    /* border-bottom: 0.075em solid #ccc; */
 }
 
 button, input {
@@ -91,6 +91,25 @@ a.ghost {
     border-radius: 10em;
 }
 
+/* Icons */
+
+[class *="icon"] {
+    display: inline-block;
+    background: no-repeat center/contain;
+    width: 1em;
+    height: 1em;
+}
+
+.icon__chevron-right {
+    background-image: url("../img/icons/chevron-right.png");
+    margin-left: 0.75em;
+}
+
+.icon__timer {
+    background-image: url("../img/icons/clock.png");
+    margin-right: 0.5em;
+}
+
 /* Topbar */
 
 .topbar {
@@ -106,22 +125,32 @@ a.ghost {
     flex: 1;
 }
 
+.topbar__logo--image {
+    width: 10em;
+}
+
 .topbar-search {
     display: flex;
+    align-items: center;
     justify-content: flex-start;
     padding: 0.5em 1em;
     background: #f5f5f5;
     border-radius: 0.25em;
 }
 
+.topbar-search__input {
+    color: #767d8c;
+}
+
+.topbar-search__icon {
+    background-image: url("../img/icons/search.png");
+    margin-right: 0.5em;
+}
+
 .topbar-menu {
     display: flex;
     align-items: center;
     margin-left: 2em;
-}
-
-.topbar-search__input {
-    color: #767d8c;
 }
 
 .topbar-menu__link {
@@ -148,6 +177,74 @@ a.ghost {
     text-shadow: unset;
 }
 
+/* Preview */
+
+.preview {
+    padding: 5em 0;
+    box-shadow: 0 50px 50px -50px #ededed;
+}
+
+.preview__image {
+    width: 35em;
+    height: 20em;
+    object-fit: contain;
+}
+
+.preview__inner {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.preview__desk {
+    display: inline-grid;
+    margin-left: 5em;
+}
+
+.preview__title {
+    margin: 0;
+    margin-bottom: 0.35em;
+}
+
+.preview__title--image {
+    display: block;
+    width: 14em;
+}
+
+.preview__description {
+    width: 16em;
+    font-size: 1.25em;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.preview__buttons {
+    display: flex;
+    margin-top: 1.5em;
+}
+
+.preview__button {
+    padding: 0.75em 1em;
+    margin-right: 1em;
+    background: #ccc;
+    border-radius: 5em;
+    color: white;
+    font-size: 0.85em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.preview__button:last-child {
+    padding: 0.75em 1.5em;
+    margin: 0;
+}
+
+.preview__button--oragne {
+    background: #ed8b4a;
+}
+
 /* Main */
 
 main {
@@ -170,6 +267,13 @@ main {
 .page-part__breadcrumb>a:hover {
     color: #333;
     text-decoration: underline;
+}
+
+.page-part__title {
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2em;
 }
 
 /* Lead */
@@ -575,8 +679,9 @@ main {
     grid-gap: 1em;
     justify-items: center;
     padding: 1em;
-    border-radius: 0.25em;
+    border-radius: 0.5em;
     box-shadow: 0 0 10px 0px #eaeaea;
+    overflow: hidden;
 }
 
 .place-ground-lead__add-time {
@@ -608,4 +713,106 @@ main {
     border-radius: 10em;
     font-weight: 600;
     color: white;
+}
+
+.place-ground-lead__timer {
+    display: flex;
+    align-items: center;
+    justify-self: left;
+    color: #ee7272;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.place-ground-lead-info {
+    display: grid;
+    row-gap: 0.25em;
+    margin-bottom: 1em;
+    font-size: 0.75em;
+}
+
+.place-ground-lead__info {
+    display: flex;
+}
+
+.place-ground-lead__info--0 {
+    margin-right: 0.5em;
+    font-weight: 600;
+}
+
+.place-ground-lead__info--1 {
+    font-weight: 500;
+}
+
+.place-ground-lead-author {
+    position: absolute;
+    right: 0.75em;
+    bottom: 0.75em;
+    display: flex;
+    align-items: center;
+}
+
+.place-ground-lead-author__avatar {
+    width: 0.9em;
+    height: 0.9em;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.place-ground-lead-author__name {
+    font-size: 0.75em;
+    font-weight: 600;
+    margin-left: 0.25em;
+}
+
+.place-ground-lead[data-new="true"]::after {
+    content: 'NEW';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5em 3em;
+    background: #ee7272;
+    transform: rotate(45deg) translate(2em, -1em);
+    color: white;
+    font-size: 0.75em;
+    font-weight: 600;
+}
+
+.place-ground-go-next {
+    display: flex;
+    align-items: center;
+    margin: 2em auto;
+    font-size: 1.1em;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    padding: 3em 0;
+    box-shadow: 0 -50px 50px -50px #ededed;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.footer__logo {
+    width: 12em;
+}
+
+.footer__title {
+    margin: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+}
+
+.footer__info {
+    font-size: 1.25em;
+    color: #ababab;
 }
