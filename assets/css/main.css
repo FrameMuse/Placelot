@@ -234,6 +234,11 @@ a.ghost {
     font-size: 0.85em;
     font-weight: 600;
     cursor: pointer;
+    transition: .125s linear background-color;
+}
+
+.preview__button:hover {
+    background: #bbb;
 }
 
 .preview__button:last-child {
@@ -243,6 +248,10 @@ a.ghost {
 
 .preview__button--oragne {
     background: #ed8b4a;
+}
+
+.preview__button--oragne:hover {
+    background: #e28445;
 }
 
 /* Main */
