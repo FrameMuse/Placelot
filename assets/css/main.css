@@ -171,7 +171,7 @@ a.ghost {
 }
 
 .topbar-menu__link--bordered:hover {
-    background: #767d8c;
+    background: #393939;
     border-color: transparent;
     color: white;
     text-shadow: unset;
@@ -251,7 +251,7 @@ a.ghost {
 }
 
 .preview__button--oragne:hover {
-    background: #e28445;
+    background: #ca743a;
 }
 
 /* Main */
@@ -681,6 +681,7 @@ main {
     display: grid;
     grid-gap: 3em;
     grid-template-columns: repeat(4, 1fr);
+    transition: 0.125s linear color;
 }
 
 .place-ground-lead {
@@ -688,9 +689,14 @@ main {
     grid-gap: 1em;
     justify-items: center;
     padding: 1em;
-    border-radius: 0.5em;
+    border-radius: 1em;
     box-shadow: 0 0 10px 0px #eaeaea;
     overflow: hidden;
+    transition: 0.125s linear box-shadow;
+}
+
+.place-ground-lead:hover {
+    box-shadow: 0 0 20px 0px #d6d6d6;
 }
 
 .place-ground-lead__add-time {
@@ -779,7 +785,7 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 0.5em 3em;
+    padding: 0.5em 2.7em;
     background: #ee7272;
     transform: rotate(45deg) translate(2em, -1em);
     color: white;
