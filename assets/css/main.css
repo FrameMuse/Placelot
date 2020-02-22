@@ -190,12 +190,22 @@ a.ghost {
     object-fit: contain;
 }
 
+.preview__picture {
+    width: 50em;
+    height: 30em;
+}
+
 .preview__inner {
     display: flex;
     align-items: center;
     /* justify-content: center; */
     width: 1100px;
     margin: 0 auto;
+}
+
+.preview__inner--grid {
+    display: grid;
+    justify-items: center;
 }
 
 .preview__desk {
