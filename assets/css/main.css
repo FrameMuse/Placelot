@@ -265,6 +265,7 @@ main {
 
 .page-part {
     display: grid;
+    margin-bottom: 5em;
 }
 
 .page-part__breadcrumb {
@@ -800,6 +801,89 @@ main {
     font-size: 1.1em;
     font-weight: 400;
     cursor: pointer;
+}
+
+/* Auth */
+
+.auth {}
+
+.auth__article {
+    display: grid;
+    justify-items: center;
+}
+
+.auth__image {
+    width: 20em;
+}
+
+.auth__description {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #9e9e9e;
+    max-width: 20em;
+    text-align: center;
+}
+
+.auth__container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.auth-login {}
+
+.auth__header {}
+
+.auth-login__form {
+    display: grid;
+    row-gap: 1em;
+    width: 18em;
+}
+
+.auth-login__label {
+    margin-bottom: -0.5em;
+}
+
+.auth-login__input {
+    padding: 0.25em 1em;
+    background: #efefef;
+    border-radius: 10em;
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #333;
+}
+
+.auth-login__submit {
+    padding: 0.5em 2em;
+    background: #777;
+    border-radius: 10em;
+    color: white;
+    font-size: 1.15em;
+    font-weight: 600;
+    justify-self: center;
+}
+
+.auth-register {
+    width: 23em;
+    text-align: center;
+}
+
+.auth__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(50% - 0.05em);
+    bottom: 0;
+    width: 0.1em;
+    background: #ccc;
+}
+
+.auth-register__button {
+    padding: 0.5em 2em;
+    background: #777;
+    border-radius: 10em;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 /* Footer */
