@@ -184,6 +184,10 @@ a.ghost {
     box-shadow: 0 50px 50px -50px #ededed;
 }
 
+.preview--remove-shadow {
+    box-shadow: unset;
+}
+
 .preview__image {
     width: 35em;
     height: 20em;
@@ -770,6 +774,11 @@ main {
     font-weight: 500;
 }
 
+.place-ground-lead__info--green {
+    font-weight: 600;
+    color: #39da2e;
+}
+
 .place-ground-lead-author {
     position: absolute;
     right: 0.75em;
@@ -894,6 +903,19 @@ main {
     color: white;
     font-size: 1em;
     font-weight: 600;
+}
+
+/* Filter */
+
+.filter {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+summary {
+    outline: none;
 }
 
 /* Footer */
