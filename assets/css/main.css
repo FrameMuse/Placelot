@@ -528,19 +528,20 @@ main {
 .profile-info {
     display: flex;
     align-items: center;
-    width: 35em;
+    width: 100%;
 }
 
 .profile-info__avatar {
     padding: 0.25em;
-    width: 10em;
-    height: 10em;
+    width: 8em;
+    height: 8em;
     border: 0.125em solid #767d8c;
     border-radius: 100%;
 }
 
 .profile-info__details {
-    margin-left: 2em;
+    margin-left: 1.5em;
+    flex: 1;
 }
 
 .profile-info__nickname {
@@ -554,7 +555,7 @@ main {
     text-transform: lowercase;
 }
 
-.profile-info__registartion-time {
+.profile-info__text {
     margin-top: 0.5em;
     font-size: 0.85em;
 }
@@ -562,26 +563,33 @@ main {
 .profile-info__achievements {
     display: grid;
     grid-gap: 0.5em;
-    margin-top: 1.25em;
+    margin-top: 1em;
+}
+
+.profile-info__achievements:only-child {
+    margin: unset;
 }
 
 .profile-info__achievements>span {
     font-size: 0.85em;
     font-weight: 500;
+    text-align: right;
 }
 
 .profile-level {
     display: grid;
+    min-width: 20em;
 }
 
 .profile-level__lvl {
     margin-bottom: 0.25em;
     font-weight: 500;
+    text-align: right;
 }
 
 .profile-level-progress-bar {
     width: 100%;
-    height: 0.25em;
+    height: 1em;
     background: #d7deec;
     border-radius: 10em;
 }
@@ -597,17 +605,19 @@ main {
 }
 
 .profile-bages {
-    display: flex;
-    margin-top: 1.25em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0.75em;
+    column-gap: 0.75em;
 }
 
 .profile-bages__bage {
-    padding: 0.4em 1em;
-    margin-right: 0.75em;
+    padding: 0.65em 2em;
     border-radius: 10em;
-    font-size: 0.75em;
+    font-size: 0.85em;
     font-weight: 600;
     color: white;
+    text-align: center;
 }
 
 .profile-bages__bage:last-child {
@@ -938,6 +948,79 @@ main {
 
 summary {
     outline: none;
+}
+
+/* Wallet */
+
+.topbar-wallet {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.topbar-wallet__icon {
+    background-image: url("../img/icons/wallet.png");
+    margin-right: 0.5em;
+}
+
+.topbar-wallet__text {}
+
+.topbar-wallet__dropdown-menu {
+    position: absolute;
+    top: 4em;
+    left: calc(-50% - 2.5em);
+    display: none;
+    padding: 1em;
+    background: white;
+    box-shadow: 0 0 20px -7px;
+    border-radius: 1.5em;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.topbar-wallet__balance {
+    display: flex;
+    align-items: center;
+    margin: 0 auto 0.5em;
+}
+
+.topbar-wallet__balance>span {
+    margin-right: 0.5em;
+}
+
+.topbar-wallet__buttons {
+    display: grid;
+    row-gap: 0.75em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.topbar-wallet__button {
+    padding: 0.5em 1.5em;
+    background: #ccc;
+    border-radius: 10em;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+.topbar-wallet__button--red {
+    background: #c75e4d;
+}
+
+.topbar-wallet__button--green {
+    background: #4dc756;
+}
+
+.topbar-wallet__dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -4em;
+    left: calc(50% - 2em);
+    border: 1.5em solid transparent;
+    border-bottom: 2.5em solid #ccc;
 }
 
 /* Footer */
