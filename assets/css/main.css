@@ -824,7 +824,9 @@ main {
 
 /* Auth */
 
-.auth {}
+.auth {
+    font-size: 1.25em;
+}
 
 .auth__article {
     display: grid;
@@ -897,12 +899,32 @@ main {
 }
 
 .auth-register__button {
+    display: inline-block;
     padding: 0.5em 2em;
     background: #777;
     border-radius: 10em;
     color: white;
-    font-size: 1em;
+    font-size: 1.15em;
     font-weight: 600;
+}
+
+.auth__sign-in {
+    display: flex;
+    margin: 0 auto;
+}
+
+.auth__vk {
+    padding: 0.5em 1em;
+    background: #628ff3;
+    border-radius: 10em;
+    margin-left: 0.5em;
+}
+
+.auth__vk--icon {
+    background-image: url("../img/icons/vk_logo.png");
+    width: 1.15em;
+    height: 1.15em;
+    top: 0.1em;
 }
 
 /* Filter */
