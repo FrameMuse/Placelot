@@ -53,6 +53,10 @@ a.ghost {
     z-index: 12;
 }
 
+b {
+    font-weight: 600;
+}
+
 .hidden, [hidden] {
     display: none !important;
 }
@@ -661,6 +665,10 @@ main {
     border-radius: 0 0 0.5em 0.5em;
 }
 
+.profile-info__nickname--icon.icon__settings {
+    background-image: url("../img/icons/gear.png");
+}
+
 /* Reveal Block  */
 
 .reveal-block {
@@ -888,7 +896,7 @@ main {
     background: #777;
     border-radius: 10em;
     color: white;
-    font-size: 1.15em;
+    font-size: 0.85em;
     font-weight: 600;
     justify-self: center;
 }
@@ -914,7 +922,7 @@ main {
     background: #777;
     border-radius: 10em;
     color: white;
-    font-size: 1.15em;
+    font-size: 0.85em;
     font-weight: 600;
 }
 
@@ -928,11 +936,12 @@ main {
     background: #628ff3;
     border-radius: 10em;
     margin-left: 0.5em;
+    font-size: 0.85em;
 }
 
 .auth__vk--icon {
     background-image: url("../img/icons/vk_logo.png");
-    width: 1.15em;
+    width: 1.5em;
     height: 1.15em;
     top: 0.1em;
 }
@@ -957,6 +966,7 @@ summary {
     align-items: center;
     margin-left: 1em;
     cursor: pointer;
+    color: #767d8c;
 }
 
 .topbar-wallet__icon {
@@ -968,7 +978,7 @@ summary {
 
 .topbar-wallet__dropdown-menu {
     position: absolute;
-    top: 4em;
+    top: 7em;
     left: calc(-50% - 2.5em);
     display: none;
     padding: 1em;
