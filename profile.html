@@ -57,7 +57,10 @@
                         <div class="profile-info__nickname">
                             <span class="profile-info__nickname--nickname">FrameMuse</span>
                             <span class="profile-info__nickname--icon icon__approved"></span>
-                            <span class="profile-info__nickname--icon icon__settings"></span>
+                            <div class="profile-info__settings" onclick="popup.open('profile_settings')">
+                                <span class="profile-info__settings--icon"></span>
+                                <span class="profile-info__settings--text">Настройки</span>
+                            </div>
                         </div>
                         <div class="profile-info__text">Дата регистрации: 01.12.2019</div>
                         <div class="profile-info__text">ID: 1234567890</div>
@@ -133,5 +136,13 @@
         <script src="assets/js/jquery-3.3.1.min.js"></script>
         <script src="assets/js/scripts.js"></script>
     </footer>
+    <div class="popup" hidden>
+        <div class="popup__cover"></div>
+        <div class="popup-window scale-out">
+            <div class="popup-window__close">✖</div>
+            <div class="popup-window__article"><span class="popup-window__title"></span><span class="popup-window__summary"></span></div>
+            <div class="popup-window__content"></div>
+        </div>
+    </div>
 </body>
 </html>

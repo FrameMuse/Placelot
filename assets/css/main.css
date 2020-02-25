@@ -629,15 +629,15 @@ main {
 }
 
 .profile-bages__bage--blue {
-    background: #43638c;
+    background: #64bceb;
 }
 
 .profile-bages__bage--green {
-    background: #4dc756;
+    background: #8ed353;
 }
 
 .profile-bages__bage--pink {
-    background: #d668be;
+    background: #b862e9;
 }
 
 .profile-personal-page {
@@ -665,8 +665,23 @@ main {
     border-radius: 0 0 0.5em 0.5em;
 }
 
-.profile-info__nickname--icon.icon__settings {
+.profile-info__settings--icon {
     background-image: url("../img/icons/gear.png");
+    margin-right: 0.5em;
+}
+
+.profile-info__settings {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    background: #ccc;
+    border-radius: 10em;
+    cursor: pointer;
+    transition: 0.125s linear background-color;
+}
+
+.profile-info__settings:hover {
+    background: #dadada;
 }
 
 /* Reveal Block  */
@@ -978,21 +993,31 @@ summary {
 
 .topbar-wallet__dropdown-menu {
     position: absolute;
-    top: 7em;
+    top: 4em;
     left: calc(-50% - 2.5em);
-    display: none;
     padding: 1em;
     background: white;
     box-shadow: 0 0 20px -7px;
     border-radius: 1.5em;
     white-space: nowrap;
     z-index: 1;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.3s ease opacity, 0s linear transform 0.3s;
+    color: #333;
+}
+
+.topbar-wallet__dropdown-menu--active {
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.3s ease opacity, 0s linear transform 0s;
 }
 
 .topbar-wallet__balance {
     display: flex;
     align-items: center;
-    margin: 0 auto 0.5em;
+    justify-content: center;
+    margin-bottom: 0.5em;
 }
 
 .topbar-wallet__balance>span {
@@ -1017,11 +1042,11 @@ summary {
 }
 
 .topbar-wallet__button--red {
-    background: #c75e4d;
+    background: #c47549;
 }
 
 .topbar-wallet__button--green {
-    background: #4dc756;
+    background: #8bc27a;
 }
 
 .topbar-wallet__dropdown-menu::before {
@@ -1031,6 +1056,130 @@ summary {
     left: calc(50% - 2em);
     border: 1.5em solid transparent;
     border-bottom: 2.5em solid #ccc;
+}
+
+/* Popup */
+
+.popup, .popup__cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup__cover {
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.popup-window {
+    position: absolute;
+    width: 50em;
+    padding: 3em;
+    background: linear-gradient(to top, #d6d6d6 0%, white 100%);
+    border-radius: 0.35em;
+    opacity: 0;
+    transform: scale(0.5);
+    z-index: 4;
+}
+
+.popup-window__article {
+    display: grid;
+    text-align: center;
+}
+
+.popup-window__title {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.popup-window__summary {
+    margin-top: 1em;
+    line-height: 1.25;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.popup-window__content {
+    /* display: grid; */
+    justify-content: center;
+    margin: 1.75em 0;
+}
+
+.popup-window__content:empty {
+    margin: 20px 0;
+}
+
+.popup-window__help {
+    text-align: center;
+}
+
+.popup-window__button {
+    padding: 1.25em 1.5em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    border-radius: 0.25em;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+.popup-window__button::placeholder {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.popup-window__button.button1 {
+    background: #88cc31;
+}
+
+.popup-window__button.button2 {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.popup-window__marked {
+    color: #47aa01;
+    text-decoration: none;
+}
+
+.popup-window__marked:hover {
+    text-decoration: underline;
+}
+
+.popup-window__close {
+    position: absolute;
+    top: 1.25em;
+    right: 1.25em;
+    font-size: 1.5em;
+    color: #6f6f6f;
+    cursor: pointer;
+}
+
+/* Scales */
+
+.scale-out {
+    transform: scale(0.75);
+    opacity: 0;
+    transition: .175s linear transform, .125s linear opacity;
+    z-index: 25;
+}
+
+.scale-in {
+    transform: scale(1);
+    opacity: 1;
+    transition: .175s linear transform, .125s linear opacity;
 }
 
 /* Footer */
