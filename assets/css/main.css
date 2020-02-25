@@ -1163,6 +1163,7 @@ summary {
     top: 1.25em;
     right: 1.25em;
     font-size: 1.5em;
+    font-weight: 600;
     color: #6f6f6f;
     cursor: pointer;
 }

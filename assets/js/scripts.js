@@ -50,11 +50,16 @@ class popup {
 
 // Profile
 
+$(document).click(function () {
+    $(".topbar-wallet__dropdown-menu").removeClass("topbar-wallet__dropdown-menu--active");
+});
+
 $(".reveal-block__summary").click(function () {
     $(this).parent().toggleClass("reveal-block--revealed");
 });
 
-$(".topbar-wallet").click(function () {
+$(".topbar-wallet > .topbar-wallet__text").click(function (e) {
+    e.stopPropagation();
     $(".topbar-wallet__dropdown-menu").toggleClass("topbar-wallet__dropdown-menu--active");
 });
 
